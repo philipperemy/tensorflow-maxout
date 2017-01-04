@@ -30,17 +30,14 @@ x = tf.placeholder(tf.float32, [None, 784], name='InputData')
 y = tf.placeholder(tf.float32, [None, 10], name='LabelData')
 
 # Set model weights
-W1 = create_convolution_variable('Weights', [784, 100])
-b1 = create_bias_variable('Bias', [100])
-
-W2 = create_convolution_variable('Weights2', [100, 10])
-b2 = create_bias_variable('Bias2', [10])
+W1 = create_convolution_variable('Weights', [784, 10])
+b1 = create_bias_variable('Bias', [10])
 
 # Construct model and encapsulating all ops into scopes, making
 # Tensorboard's Graph visualization more convenient
 with tf.name_scope('Model'):
     # Model
-    t = tf.nn.sigmoid(tf.matmul(x, W1) + b1)
+    t = tf.nn.relu(tf.matmul(x, W1) + b1)
     pred = tf.nn.softmax(tf.matmul(t, W2) + b2)  # Softmax
     # pred = tf.nn.softmax(tf.matmul(x, W1) + b1)  # Softmax
 with tf.name_scope('Loss'):
