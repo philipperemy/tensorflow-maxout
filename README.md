@@ -9,10 +9,7 @@ Maxout Networks TensorFlow implementation presented in https://arxiv.org/abs/130
 # make sure Tensorflow is installed.
 git clone git@github.com:philipperemy/tensorflow-maxout.git maxout
 cd maxout
-python mnist_maxout_example.py MAXOUT to use MaxOut on MNIST.
-python mnist_maxout_example.py LINEAR to use Linear on MNIST.
-python mnist_maxout_example.py RELU to use ReLU on MNIST.
-# Usage: python mnist_maxout_example.py (LINEAR|RELU|MAXOUT)
+python mnist_maxout_example.py MAXOUT # Can pick up from one of those values: LINEAR, RELU, MAXOUT.
 ```
 
 ## How to integrate it in your code
