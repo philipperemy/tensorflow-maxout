@@ -4,12 +4,15 @@ Maxout Networks TensorFlow implementation presented in https://arxiv.org/abs/130
 <div align="center">
   <img src="https://www.tensorflow.org/images/tf_logo_transp.png" width="150"><br><br>
 </div>
-## How to clone the repo?
+## How to run the MNIST experiment?
 ```
+# make sure Tensorflow is installed.
 git clone git@github.com:philipperemy/tensorflow-maxout.git maxout
 cd maxout
-# make sure Tensorflow is installed.
-python maxout.py # to see how it's usable.
+python mnist_maxout_example.py MAXOUT to use MaxOut on MNIST.
+python mnist_maxout_example.py LINEAR to use Linear on MNIST.
+python mnist_maxout_example.py RELU to use ReLU on MNIST.
+# Usage: python mnist_maxout_example.py (LINEAR|RELU|MAXOUT)
 ```
 
 ## How to integrate it in your code
