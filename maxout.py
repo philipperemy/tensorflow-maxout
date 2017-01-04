@@ -1,5 +1,5 @@
-import tensorflow as tf
 import numpy as np
+import tensorflow as tf
 
 """
 
@@ -25,6 +25,8 @@ Raises:
 
 def max_out(inputs, num_units, axis=None):
     shape = inputs.get_shape().as_list()
+    if shape[0] is None:
+        shape[0] = -1
     if axis is None:  # Assume that channel is the last dimension
         axis = -1
     num_channels = shape[axis]
