@@ -35,11 +35,9 @@ As expected, Maxout strictly outperforms Sigmoid and ReLU. Having one hidden lay
 
 ## Accuracy
 
-<div align="center">
 | Model      | Accuracy (100 epochs) | 
 | ------------- |:-------------:|
 | MLP Hidden MaxOut      | 0.9718 |
 | MLP Hidden ReLU       |  0.9704      |
 | MLP Hidden Sigmoid | 0.9353      |
 | MLP Linear | 0.9214      |
-</div>
