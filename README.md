@@ -26,6 +26,20 @@ t = max_out(tf.matmul(x, W1) + b1, num_units=50)
 Those results are not meant to reproduce the results of the paper. It's more about showing on how to use the maxout non linearity in the Tensorflow graphs.
 
 ## Loss
+
+As expected, Maxout strictly outperforms Sigmoid and ReLU. Having one hidden layer + non linearity always helps have a lower loss.
+
 <div align="center">
   <img src="fig/mnist.png" width="400"><br><br>
+</div>
+
+## Accuracy
+
+<div align="center">
+| Model      | Accuracy (100 epochs) | 
+| ------------- |:-------------:|
+| MLP Hidden MaxOut      | 0.9718 |
+| MLP Hidden ReLU       |  0.9704      |
+| MLP Hidden Sigmoid | 0.9353      |
+| MLP Linear | 0.9214      |
 </div>
