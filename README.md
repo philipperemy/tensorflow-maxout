@@ -27,7 +27,7 @@ Those results are not meant to reproduce the results of the paper. It's more abo
 
 ## Loss
 
-As expected, Maxout strictly outperforms Sigmoid and ReLU. Having one hidden layer + non linearity always helps have a lower loss.
+As expected, Maxout strictly outperforms Sigmoid and ReLU. Having one hidden layer + non linearity helps to have a smaller loss.
 
 <div align="center">
   <img src="fig/mnist.png" width="400"><br><br>
