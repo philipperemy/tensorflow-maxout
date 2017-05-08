@@ -5,6 +5,7 @@ Maxout Networks TensorFlow implementation presented in https://arxiv.org/abs/130
   <img src="https://www.tensorflow.org/images/tf_logo_transp.png" width="150"><br><br>
 </div>
 ## How to run the MNIST experiment?
+
 ```
 # make sure Tensorflow is installed.
 git clone git@github.com:philipperemy/tensorflow-maxout.git maxout
