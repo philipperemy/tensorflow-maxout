@@ -96,18 +96,17 @@ with tf.name_scope('Accuracy'):
 init = tf.initialize_all_variables()
 
 # Create a summary to monitor cost tensor
-tf.scalar_summary('loss', cost)
 # Create a summary to monitor accuracy tensor
-tf.scalar_summary('accuracy', acc)
+tf.summary.scalar('accuracy', acc)
 # Merge all summaries into a single op
-merged_summary_op = tf.merge_all_summaries()
+merged_summary_op = tf.summary.merge_all()
 
 # Launch the graph
 with tf.Session() as sess:
     sess.run(init)
 
     # op to write logs to Tensorboard
-    summary_writer = tf.train.SummaryWriter(logs_path, graph=tf.get_default_graph())
+    summary_writer = tf.summary.FileWriter(logs_path, graph=tf.get_default_graph())
 
     # Training cycle
     for epoch in range(training_epochs):
@@ -134,6 +133,6 @@ with tf.Session() as sess:
     # Calculate accuracy
     print('Accuracy:', acc.eval({x: mnist.test.images, y: mnist.test.labels}))
 
-    print('Run the command line:\n' \
-          '--> tensorboard --logdir=/tmp/tensorflow_logs ' \
-          '\nThen open http://0.0.0.0:6006/ into your web browser')
+    print('Run the command line:')
+    print('--> tensorboard --logdir=/tmp/tensorflow_logs')
+    print('Then open http://0.0.0.0:6006/ into your web browser')
