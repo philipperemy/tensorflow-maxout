@@ -5,8 +5,7 @@ Maxout Networks TensorFlow implementation presented in https://arxiv.org/abs/130
 
 ```
 # make sure Tensorflow is installed.
-git clone git@github.com:philipperemy/tensorflow-maxout.git maxout
-cd maxout
+git clone git@github.com:philipperemy/tensorflow-maxout.git maxout && cd maxout
 python mnist_maxout_example.py MAXOUT # Can pick up from one of those values: LINEAR, RELU, MAXOUT.
 ```
 
