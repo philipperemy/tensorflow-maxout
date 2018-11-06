@@ -1,11 +1,6 @@
 # Maxout Networks (Ian Goodfellow, Yoshua Bengio - 2013)
 Maxout Networks TensorFlow implementation presented in https://arxiv.org/abs/1302.4389
 
-<div align="center">
-  <img src="https://www.tensorflow.org/images/tf_logo_transp.png" width="150"><br><br>
-</div>
-
-
 ## How to run the MNIST experiment?
 
 ```
