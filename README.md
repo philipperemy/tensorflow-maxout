@@ -15,7 +15,8 @@ It's two lines of code. Sorry I can't make it shorter.
 
 ```python
 from maxout import max_out
-t = max_out(tf.matmul(x, W1) + b1, num_units=50)
+y = tf.matmul(x, W1) + b1
+t = max_out(y, num_units=50)
 ```
 
 # Some Results on MNIST dataset
